@@ -1,5 +1,6 @@
 def sum(a, b, c):
     return a+b+c
+    
 def printBoard(xState, zState):
     zero = 'X' if xState[0]==1 else ('O' if oState[0]==1 else 0)
     one = 'X' if xState[1]==1 else ('O' if oState[1]==1 else 1)
@@ -34,12 +35,14 @@ if __name__=="__main__":
     oState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     turn = 1 # 1 for x and 0 for O
     print("Welcome to Tic Tac Toe")
+    
     while(True):
         printBoard(xState, oState)
         if turn==1:
             print("X's chance")
             value = int(input("Enter the index: "))
             xState[value] = 1
+            
         else:
             print("O's turn")
             value = int(input("Enter the index: "))
