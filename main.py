@@ -33,8 +33,9 @@ if __name__=="__main__":
             print("X's chance")
             value = int(input("Enter the index: "))
             
-            if State[value]!='O':
+            if State[value]==value:
                 State[value]='X'
+                turn = 1 if turn==0 else 0
             else:
                 print("Enter a different value")
             
@@ -43,8 +44,9 @@ if __name__=="__main__":
             print("O's turn")
             value = int(input("Enter the index: "))
             
-            if State[value]!='X':
+            if State[value]==value:
                 State[value]='O'
+                turn = 1 if turn==0 else 0
             else:
                 print("Enter another index")
         
@@ -56,5 +58,3 @@ if __name__=="__main__":
         
         if (c_victory==-2):
             break
-
-        turn = 1 if turn==0 else 0
